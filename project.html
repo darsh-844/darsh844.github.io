@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Used House Items Market</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* =====================
+           DESKTOP FIRST
+        ====================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f8ff; /* Desktop color */
+        }
+
+        /* HEADER */
+        header {
+            background-color: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* LOGO */
+        .logo {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: white;
+            margin: 15px auto;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* NAVBAR */
+        nav {
+            background-color: #111827;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            position: relative;
+        }
+
+        nav h2 {
+            color: white;
+        }
+
+        /* NAV LINKS */
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        /* HAMBURGER (CSS ONLY) */
+        #menu-toggle {
+            display: none;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 26px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* ITEMS GRID */
+        .container {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        /* ITEM CARD */
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 15px 0 5px;
+        }
+
+        .card p {
+            color: green;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #111827;
+            position: fixed;
+            width: 100%;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        /* =====================
+           TABLET (≤ 992px)
+        ====================== */
+        @media (max-width: 992px) {
+            body {
+                background-color: greenyellow; /* Tablet color */
+            }
+
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* =====================
+           MOBILE (≤ 600px)
+        ====================== */
+        @media (max-width: 600px) {
+            body {
+                background-color: pink; /* Mobile color */
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #111827;
+                flex-direction: column;
+                display: none;
+            }
+
+            .nav-links li {
+                text-align: center;
+                padding: 15px 0;
+            }
+
+            /* SHOW MENU WHEN CHECKED */
+            #menu-toggle:checked + .hamburger + .nav-links {
+                display: flex;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Used House Items Market</h1>
+        <div class="logo">
+            <img src="https://via.placeholder.com/150" alt="Logo">
+        </div>
+        <p>Buy & Sell Used Household Appliances</p>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h2>UHI Market</h2>
+
+        <!-- CHECKBOX FOR MENU -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- HAMBURGER ICON -->
+        <label for="menu-toggle" class="hamburger">☰</label>
+
+        <!-- NAV LINKS -->
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Buy</a></li>
+            <li><a href="#">Sell</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ITEMS -->
+    <section class="container">
+        <div class="card">
+            <img src="https://via.placeholder.com/400x300" alt="Refrigerator">
+            <h3>Refrigerator</h3>
+            <p>₹8,000</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/400x300" alt="TV">
+            <h3>LED TV</h3>
+            <p>₹12,500</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/400x300" alt="AC">
+            <h3>Air Conditioner</h3>
+            <p>₹18,000</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/400x300" alt="Washing Machine">
+            <h3>Washing Machine</h3>
+            <p>₹7,500</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/400x300" alt="Microwave">
+            <h3>Microwave Oven</h3>
+            <p>₹4,000</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/400x300" alt="Cooler">
+            <h3>Air Cooler</h3>
+            <p>₹3,500</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Used House Items Market™. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
