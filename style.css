@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #c7e2fa;
+    padding-bottom: 5rem;
+}
+
+/* HEADER */
+header {
+    background: #f57d9d;
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+header p {
+    margin-top: 0.5rem;
+}
+
+/* LOGO */
+.logo {
+    width: 8rem;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* NAV */
+nav {
+    background: #111827;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+}
+
+nav h2 {
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1.25rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* PRODUCTS */
+.container {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.card {
+    background: white;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding-bottom: 0.75rem;
+}
+
+.card img {
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+    padding: 0.75rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.new-price {
+    color: green;
+    font-weight: bold;
+}
+
+.buy-btn {
+    background: #111827;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.25rem;
+    cursor: pointer;
+}
+
+.buy-btn:hover {
+    background: #f57d9d;
+}
+
+/* SELL FORM */
+.sell {
+    background: white;
+    margin: 40px;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.sell h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sell form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sell input,
+.sell textarea {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.sell button {
+    background: #111827;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.sell button:hover {
+    background: #f57d9d;
+}
+
+/* CONTACT */
+.contact {
+    background: white;
+    margin: 40px;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contact-details h3 {
+    margin-bottom: 10px;
+}
+
+.contact-details p {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 120px;
+}
+
+.contact-form button {
+    background: #111827;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background: #f57d9d;
+}
+
+/* FOOTER */
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    body{
+        background-color: #95b2f0;
+    }
+    header{
+        background-color: #f57d9d;
+    }
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #111827;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    #menu-toggle:checked + .hamburger + .nav-links {
+        display: flex;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .contact,
+    .sell {
+        margin: 20px;
+        padding: 25px;
+    }
+}
+@media (max-width: 1024px) {
+    header {
+        background-color: #f57d9d;
+    }
+
+    body {
+        background-color: #f3d9ff;
+    }
+}

@@ -2,268 +2,156 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CASA ECONOMIA</title>
+    <title>HOME HAVEN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style>
-        /* DESKTOP FIRST */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background-color: #c7e2fa; /* Desktop color */
-        }
-
-        /* HEADER */
-        header {
-            background-color: #f57d9d;
-            color: #000000;
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* LOGO */
-        .logo {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            overflow: hidden;
-            background: white;
-            margin: 15px auto;
-        }
-
-        .logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* NAVBAR */
-        nav {
-            background-color: #111827;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            position: relative;
-        }
-
-        nav h2 {
-            color: white;
-        }
-
-        /* NAV LINKS */
-        .nav-links {
-            list-style: none;
-            display: flex;
-        }
-
-        .nav-links li {
-            margin-left: 20px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: white;
-            font-size: 16px;
-        }
-
-        /* HAMBURGER (CSS ONLY) */
-        #menu-toggle {
-            display: none;
-        }
-
-        .hamburger {
-            display: none;
-            font-size: 26px;
-            color: white;
-            cursor: pointer;
-        }
-
-        /* ITEMS GRID */
-        .container {
-            padding: 30px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        /* ITEM CARD */
-        .card {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .card h3 {
-            margin: 15px 0 5px;
-        }
-
-        .card p {
-            color: green;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        /* FOOTER */
-        footer {
-            background-color: #111827;
-            position: fixed;
-            width: 100%;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 100px;
-        }
-
-        /* TABLET */
-        @media (max-width: 1024px) {
-            body {
-                background-color: rgb(245, 182, 255); /* Tablet color */
-            }
-            header{
-                background-color: #86eff4;
-            }
-            footer{
-                position: fixed;
-                width: 100%;
-                height: auto;
-            }
-            .container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        /* MOBILE */
-        @media (max-width: 768px) {
-            body {
-                background-color: pink; /* Mobile color */
-            }
-            header{
-                background-color: #95b2f0;
-            }
-            footer{
-                position: fixed;
-                width: 100%;
-                height: auto;
-            }
-            .hamburger {
-                display: block;
-            }
-
-            .nav-links {
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                background-color: #111827;
-                flex-direction: column;
-                display: none;
-            }
-
-            .nav-links li {
-                text-align: center;
-                padding: 15px 0;
-            }
-
-            /* SHOW MENU WHEN CHECKED */
-            #menu-toggle:checked + .hamburger + .nav-links {
-                display: flex;
-            }
-
-            .container {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <h1>CASA ECONOMIA</h1>
+<header>
+    <div class="header-bar">
+        <h1>HOME HAVEN</h1>
         <div class="logo">
-            <img src="https://via.placeholder.com/150" alt="Logo">
+            <img src="./images/Pink_and_White_Cute_Feminine_Fashion_Store_Logo-removebg-preview.png" alt="Home Haven Logo">
         </div>
-        <p>"<i>Buy & Sell Used Household Appliances</i>"</p>
-    </header>
+    </div>
+    <p><i>"We Buy & Sell Used Household Appliances"</i></p>
+</header>
 
-    <!-- NAVBAR -->
-    <nav>
-        <h2>UHI Market</h2>
+<nav>
+    <h2>HH Market</h2>
 
-        <!-- CHECKBOX FOR MENU -->
-        <input type="checkbox" id="menu-toggle">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">☰</label>
 
-        <!-- HAMBURGER ICON -->
-        <label for="menu-toggle" class="hamburger">☰</label>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#buy">Buy</a></li>
+        <li><a href="#sell">Sell</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-        <!-- NAV LINKS -->
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Buy</a></li>
-            <li><a href="#">Sell</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+<!-- PRODUCTS -->
+<section class="container" id="buy">
 
-    <!-- ITEMS -->
-    <section class="container">
-        <div class="card">
-            <img src="https://via.placeholder.com/400x300" alt="Refrigerator">
-            <h3>Refrigerator</h3>
-            <p>₹8,000</p>
+    <div class="card">
+        <img src="./images/Realistic_television_screen-removebg-preview.png" alt="LED TV">
+        <h3>LED TV</h3>
+        <p class="old-price">₹18,000</p>
+        <p class="new-price">₹12,500</p>
+        <button class="buy-btn">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="./images/Air_conditioner_isolated_on_transparent_background___Premium_AI-generated_PSD-removebg-preview.png" alt="Air Conditioner">
+        <h3>Air Conditioner</h3>
+        <p class="old-price">₹25,000</p>
+        <p class="new-price">₹18,000</p>
+        <button class="buy-btn">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="./images/IMGBIN_com_-_Download_Transparent_PNG_Images__For_Free-removebg-preview.png" alt="Washing Machine">
+        <h3>Washing Machine</h3>
+        <p class="old-price">₹12,000</p>
+        <p class="new-price">₹7,500</p>
+        <button class="buy-btn">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="./images/A-iPower_2300_Watt_Portable_Inverter_Generator-removebg-preview.png" alt="Inverter">
+        <h3>Inverter</h3>
+        <p class="old-price">₹22,000</p>
+        <p class="new-price">₹15,000</p>
+        <button class="buy-btn">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="./images/Forno_microondas_isolado_em_fundo_transparente___PSD_Premium_gerado_com_IA-removebg-preview.png" alt="Microwave Oven">
+        <h3>Microwave Oven</h3>
+        <p class="old-price">₹6,000</p>
+        <p class="new-price">₹4,000</p>
+        <button class="buy-btn">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="./images/Transparent_Mixer_Clipart_-_Kitchen_Blender_On_Transparent_Background__HD_Png_Download_872x1491__-_PngFind-removebg-preview.png" alt="Mixer Grinder">
+        <h3>Mixer Grinder</h3>
+        <p class="old-price">₹4,500</p>
+        <p class="new-price">₹2,900</p>
+        <button class="buy-btn">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="./images/Turn_Up_the_Heat_With_Induction_Cooktops_-_Fine___-removebg-preview.png" alt="Induction Stove">
+        <h3>Induction Stove</h3>
+        <p class="old-price">₹3,500</p>
+        <p class="new-price">₹2,000</p>
+        <button class="buy-btn">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="./images/Refrigerator_Icon_PNG-removebg-preview.png" alt="Refrigerator">
+        <h3>Refrigerator</h3>
+        <p class="old-price">₹22,000</p>
+        <p class="new-price">₹10,000</p>
+        <button class="buy-btn">Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="./images/Faber_Galaxy_Plus_RO+UV+UF+MAT_Water_Purifier-removebg-preview.png" alt="Water Purifier">
+        <h3>Water Purifier</h3>
+        <p class="old-price">₹10,000</p>
+        <p class="new-price">₹6,500</p>
+        <button class="buy-btn">Buy Now</button>
+    </div>
+
+
+</section>
+
+<!-- SELL FORM -->
+<section class="sell" id="sell">
+    <h2>Sell Your Product</h2>
+
+     <form action="./sale.html" method="get" target="_blank">
+        <input type="text" placeholder="Product Name" required>
+        <input type="number" placeholder="Expected Price" required>
+        <textarea placeholder="Product Description"></textarea>
+        <button type="submit">Post for Sale</button>
+    </form>
+</section>
+<!-- CONTACT SECTION -->
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+
+    <div class="contact-wrapper">
+
+        <!-- COMPANY DETAILS -->
+        <div class="contact-details">
+            <h3>HOME HAVEN</h3>
+            <p><strong>Email:</strong> support@homehaven25.com</p>
+            <p><strong>Phone:</strong> +91 80045 77018</p>
+            <p><strong>Address:</strong> Noida, India</p>
+            <p>We deal in buying & selling trusted used household appliances.</p>
         </div>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/400x300" alt="TV">
-            <h3>LED TV</h3>
-            <p>₹12,500</p>
-        </div>
+        <!-- CONTACT FORM -->
+        <form class="contact-form" action="./contact.html" method="get" target="_blank">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="tel" placeholder="Your Phone">
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/400x300" alt="AC">
-            <h3>Air Conditioner</h3>
-            <p>₹18,000</p>
-        </div>
+    </div>
+</section>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/400x300" alt="Washing Machine">
-            <h3>Washing Machine</h3>
-            <p>₹7,500</p>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/400x300" alt="Microwave">
-            <h3>Microwave Oven</h3>
-            <p>₹4,000</p>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/400x300" alt="Cooler">
-            <h3>Air Cooler</h3>
-            <p>₹3,500</p>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2029 CASA ECONOMIA™. All Rights Reserved.</p>
-    </footer>
+<footer>
+    <p>© 2025 HOME HAVEN™ . All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
