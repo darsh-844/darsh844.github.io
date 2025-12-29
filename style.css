@@ -154,6 +154,11 @@ nav h2 {
     font-size: 1rem;
 }
 
+.sell textarea {
+    resize: vertical;
+    height: 6rem;
+}
+
 .sell button {
     background: #111827;
     color: white;
@@ -204,7 +209,7 @@ nav h2 {
 }
 
 .contact-form textarea {
-    resize: none;
+    resize: vertical;
     height: 7.5rem;
 }
 
